@@ -90,3 +90,9 @@
 .code__img img {
   max-width: 50rem;
 }
+
+@media (max-width:562px){
+  .code{
+    flex-direction: column;
+  }
+}
