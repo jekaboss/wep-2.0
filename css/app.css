@@ -873,11 +873,11 @@ body {
 
 @media (max-width: 562px) {
   .spollers__item {
-    width: 528px;
+    width: 352px;
   }
 
   .spollers__title {
-    min-width: 531px;
+    min-width: 324px;
   }
 }
 
@@ -910,8 +910,12 @@ body {
     margin-top: 500px;
   }
 
-  .spollers__title {
+  /* .spollers__title {
     min-width: 355px;
+  } */
+
+  .spollers__item {
+    width: 352px;
   }
 
   .search-container.active {
