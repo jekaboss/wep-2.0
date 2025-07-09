@@ -18,7 +18,11 @@
 
 @media (max-width:800px) {
   .vite__vite img {
-    width: 14.9375rem;
+    width: 188px;
+  }
+
+  .vite {
+    justify-content: center;
   }
 }
 
