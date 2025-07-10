@@ -656,7 +656,7 @@ body {
 @media (max-width: 47.99875em) {
   .menu__body {
     position: fixed;
-    width: 100%;
+    width: 105%;
     height: 100%;
     left: -100%;
     top: 0;
@@ -677,7 +677,7 @@ body {
   }
 
   [data-fls-menu-open] .menu__body {
-    left: 0;
+    left: -9px;
   }
 
   [data-fls-menu-open] .menu__body::before {
@@ -915,7 +915,7 @@ body {
   } */
 
   .spollers__item {
-    width: 352px;
+    width: 320px;
   }
 
   .search-container.active {
