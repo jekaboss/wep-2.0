@@ -460,12 +460,28 @@ updateDateTime();
 // ============ Поіск ======================= 
 const data = [
   { title: "html", url: "html.html" },
+  { title: "Служебни теги", url: "html.html" },
+  { title: "Структура блока", url: "html.html" },
+  { title: "Текст", url: "html.html" },
+  { title: "Таблици", url: "html.html" },
+  { title: "Списки", url: "html.html" },
+  { title: "Ізображения", url: "html.html" },
+  { title: "Форма html", url: "html.html" },
+  { title: "Встраіваемие елементи", url: "html.html" },
+  { title: "Ссилка", url: "html.html" },
+  // =============================================
   { title: "css", url: "css.html" },
+  // =============================================
   { title: "scss", url: "scss.html" },
+  // =============================================
   { title: "javaScript", url: "js.html" },
+  // =============================================
   { title: "php", url: "addphp.html" },
+  // =============================================
   { title: "wordpress", url: "wp.html" },
-  { title: "git", url: "git.html" }
+  // =============================================
+  { title: "git", url: "git.html" },
+  // =============================================
 ];
 const toggleBtn = document.getElementById("toggleSearch");
 const searchContainer = document.getElementById("searchContainer");
