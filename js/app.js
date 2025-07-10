@@ -459,12 +459,13 @@ setInterval(updateDateTime, 1e3);
 updateDateTime();
 // ============ Поіск ======================= 
 const data = [
-  { title: "Головна сторінка", url: "index.html" },
-  { title: "Про нас", url: "about.html" },
-  { title: "Контакти", url: "contacts.html" },
-  { title: "Магазин товарів", url: "shop.html" },
-  { title: "Блог", url: "blog.html" },
-  { title: "Допомога", url: "help.html" }
+  { title: "html", url: "html.html" },
+  { title: "css", url: "css.html" },
+  { title: "scss", url: "scss.html" },
+  { title: "javaScript", url: "js.html" },
+  { title: "php", url: "addphp.html" },
+  { title: "wordpress", url: "wp.html" },
+  { title: "git", url: "git.html" }
 ];
 const toggleBtn = document.getElementById("toggleSearch");
 const searchContainer = document.getElementById("searchContainer");
