@@ -136,7 +136,7 @@ let bodyUnlock = (delay = 500) => {
       document.documentElement.removeAttribute("data-fls-scrolllock");
     }, delay);
     bodyLockStatus = false;
-    setTimeout(function() {
+    setTimeout(function () {
       bodyLockStatus = true;
     }, delay);
   }
@@ -151,7 +151,7 @@ let bodyLock = (delay = 500) => {
     document.body.style.paddingRight = lockPaddingValue;
     document.documentElement.setAttribute("data-fls-scrolllock", "");
     bodyLockStatus = false;
-    setTimeout(function() {
+    setTimeout(function () {
       bodyLockStatus = true;
     }, delay);
   }
@@ -174,7 +174,7 @@ function dataMediaQueries(array, dataSetValue) {
 function spollers() {
   const spollersArray = document.querySelectorAll("[data-fls-spollers]");
   if (spollersArray.length > 0) {
-    let initSpollers = function(spollersArray2, matchMedia = false) {
+    let initSpollers = function (spollersArray2, matchMedia = false) {
       spollersArray2.forEach((spollersBlock) => {
         spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
         if (matchMedia.matches || !matchMedia) {
@@ -185,7 +185,7 @@ function spollers() {
           initSpollerBody(spollersBlock, false);
         }
       });
-    }, initSpollerBody = function(spollersBlock, hideSpollerBody = true) {
+    }, initSpollerBody = function (spollersBlock, hideSpollerBody = true) {
       let spollerItems = spollersBlock.querySelectorAll("details");
       if (spollerItems.length) {
         spollerItems.forEach((spollerItem) => {
@@ -207,7 +207,7 @@ function spollers() {
           }
         });
       }
-    }, setSpollerAction = function(e) {
+    }, setSpollerAction = function (e) {
       const el = e.target;
       if (el.closest("summary") && el.closest("[data-fls-spollers]")) {
         e.preventDefault();
@@ -258,7 +258,7 @@ function spollers() {
           });
         }
       }
-    }, hideSpollersBody = function(spollersBlock) {
+    }, hideSpollersBody = function (spollersBlock) {
       const spollerActiveBlock = spollersBlock.querySelector("details[open]");
       if (spollerActiveBlock && !spollersBlock.querySelectorAll(".--slide").length) {
         const spollerActiveTitle = spollerActiveBlock.querySelector("summary");
@@ -271,7 +271,7 @@ function spollers() {
       }
     };
     document.addEventListener("click", setSpollerAction);
-    const spollersRegular = Array.from(spollersArray).filter(function(item, index, self) {
+    const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
       return !item.dataset.flsSpollers.split(",")[0];
     });
     if (spollersRegular.length) {
@@ -280,7 +280,7 @@ function spollers() {
     let mdQueriesArray = dataMediaQueries(spollersArray, "flsSpollers");
     if (mdQueriesArray && mdQueriesArray.length) {
       mdQueriesArray.forEach((mdQueriesItem) => {
-        mdQueriesItem.matchMedia.addEventListener("change", function() {
+        mdQueriesItem.matchMedia.addEventListener("change", function () {
           initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
         });
         initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
@@ -290,7 +290,7 @@ function spollers() {
 }
 window.addEventListener("load", spollers);
 function menuInit() {
-  document.addEventListener("click", function(e) {
+  document.addEventListener("click", function (e) {
     if (bodyLockStatus && e.target.closest("[data-fls-menu]")) {
       bodyLockToggle();
       document.documentElement.toggleAttribute("data-fls-menu-open");
@@ -303,10 +303,10 @@ function preloader() {
   const htmlDocument = document.documentElement;
   const isPreloaded = localStorage.getItem(location.href) && document.querySelector('[data-fls-preloader="true"]');
   if (preloaderImages.length && !isPreloaded) {
-    let setValueProgress = function(progress2) {
+    let setValueProgress = function (progress2) {
       showPecentLoad ? showPecentLoad.innerText = `${progress2}%` : null;
       showLineLoad ? showLineLoad.style.width = `${progress2}%` : null;
-    }, imageLoaded = function() {
+    }, imageLoaded = function () {
       imagesLoadedCount++;
       progress = Math.round(100 / preloaderImages.length * imagesLoadedCount);
       const intervalId = setInterval(() => {
@@ -459,22 +459,22 @@ setInterval(updateDateTime, 1e3);
 updateDateTime();
 // ============ Поіск ======================= 
 const data = [
-  { title: "html", url: "html.html" },
-  { title: "Служебни теги", url: "html.html" },
-  { title: "Структура блока", url: "html.html" },
-  { title: "Текст", url: "html.html" },
-  { title: "Таблици", url: "html.html" },
-  { title: "Списки", url: "html.html" },
-  { title: "Ізображения", url: "html.html" },
-  { title: "Форма html", url: "html.html" },
-  { title: "Встраіваемие елементи", url: "html.html" },
-  { title: "Ссилка", url: "html.html" },
-  { title: "css", url: "css.html" },
-  { title: "scss", url: "scss.html" },
-  { title: "javaScript", url: "js.html" },
-  { title: "php", url: "addphp.html" },
-  { title: "wordpress", url: "wp.html" },
-  { title: "git", url: "git.html" }
+  { title: "html", url: "html.html", description: "HTML" },
+  { title: "Служебни теги", url: "html.html", description: "Служебні теги в HTML" },
+  { title: "Структура блока", url: "html.html", description: "Структура блоку в HTML" },
+  { title: "Текст", url: "html.html", description: "Текстові елементи HTML" },
+  { title: "Таблици", url: "html.html", description: "Табличні елементи HTML" },
+  { title: "Списки", url: "html.html", description: "Спискові елементи HTML" },
+  { title: "Ізображения", url: "html.html", description: "Зображення в HTML" },
+  { title: "Форма html", url: "html.html", description: "Форми в HTML" },
+  { title: "Встраіваемие елементи", url: "html.html", description: "Вбудовані елементи HTML" },
+  { title: "Ссилка", url: "html.html", description: "Ссилки в HTML" },
+  { title: "css", url: "css.html", description: "CSS стилі" },
+  { title: "scss", url: "scss.html", description: "SCSS стилі" },
+  { title: "javaScript", url: "js.html", description: "JavaScript" },
+  { title: "php", url: "addphp.html", description: "PHP" },
+  { title: "wordpress", url: "wp.html", description: "WordPress" },
+  { title: "git", url: "git.html", description: "Git" }
 ];
 const toggleBtn = document.getElementById("toggleSearch");
 const searchContainer = document.getElementById("searchContainer");
