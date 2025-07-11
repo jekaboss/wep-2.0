@@ -1,4 +1,4 @@
-import "app.js";
+import "./app.js";
 const playlist = document.getElementById("modern-playlist");
 const iframe = document.getElementById("youtube-player");
 function removeActiveClass() {
