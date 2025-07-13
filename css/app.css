@@ -659,7 +659,7 @@ body {
 @media (max-width: 47.99875em) {
   .menu__body {
     position: fixed;
-    width: 105%;
+    width: 103%;
     height: 100%;
     left: -100%;
     top: 0;
@@ -880,7 +880,7 @@ body {
   }
 
   .spollers__title {
-    min-width: 324px;
+    min-width: 353px;
   }
 }
 
@@ -918,10 +918,13 @@ body {
   } */
 
   .spollers__item {
-    width: 320px;
+    width: 355px;
   }
 
   .search-container.active {
     width: 10.75rem;
+  }
+  .spollers__body{
+    width: 110%;
   }
 }
